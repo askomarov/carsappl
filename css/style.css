@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: lightcyan;
+}
+.app-body {
+  margin: 0 auto;
+  width: 320px;
+  padding: 20px;
+  display: grid;
+  width: 100%;
+}
+
+.app__title {
+}
+.app__search-wrapper {
+}
+.search-wrapper {
+}
+.search-wrapper__label {
+}
+.search-wrapper__input {
+}
+.app__cars-list {
+}
+.cars-list {
+}
+.list-group {
+}
+.cars-list__item {
+}
+.list-group-item {
+}
+.app__car-wrapper {
+}
+.car-wrapper {
+}
+.car-wrapper__name {
+}
+.car-wrapper__img-wrapper {
+}
+.car-wrapper__img {
+}
+.car-wrapper__details {
+}
+.car-details {
+}
+.car-details__title {
+}
+.car-details__list {
+}
+.car-details__item {
+}
+.car-wrapper__phone {
+}
+.car-wrapper__btns {
+}
+.car-wrapper__btn {
+}
+.btn {
+}
+.btn-light {
+}
+.btn-phone {
+}
+.btn-success {
+}
+.btn-buy {
+}

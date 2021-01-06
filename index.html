@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cars application Vue</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<section class="container">
+		<div id="app" class="app app-body">
+			<h1 class="app__title">Cars application</h1>
+
+			<div class="app__search-wrapper search-wrapper">
+				<label class="search-wrapper__label" for="search">Find your car</label>
+				<input class="search-wrapper__input" type="search" name="search" id="search">
+			</div>
+
+			<ul class="app__cars-list cars-list list-group">
+				<li v-for="(car, index) in cars" @click="selectCar(index)" :class="{'active': selectedCarIndex === index}"
+					class="cars-list__item list-group-item">{{car.name}} {{car.model}}
+				</li>
+			</ul>
+
+			<div class="app__car-wrapper car-wrapper">
+				<h2 class="car-wrapper__name">{{car.name}} {{car.model}}</h2>
+				<div class="car-wrapper__img-wrapper">
+					<img :src="car.image" :alt="car.name" class="car-wrapper__img" width="300" height="200">
+				</div>
+				<div class="car-wrapper__details car-details">
+					<h3 class="car-details__title">Car details</h3>
+					<ul class="car-details__list">
+						<li class="car-details__item">{{car.name}}</li>
+						<li class="car-details__item">{{car.model}}</li>
+						<li class="car-details__item">{{car.year}}</li>
+					</ul>
+				</div>
+				<p v-if="phoneVisibility" class="car-wrapper__phone">{{car.phone}}</p>
+				<ul class="car-wrapper__btns">
+					<li class="car-wrapper__btn btn btn-light btn-phone" @click="phoneVisibility = true">show</li>
+					<li class="car-wrapper__btn btn btn-success btn-buy">buy</li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
